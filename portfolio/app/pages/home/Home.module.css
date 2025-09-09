@@ -1,0 +1,22 @@
+.landingContainer {
+    margin-top: 30px;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageHeader {
+
+    margin-top: 200px;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageHeader p{
+    font-size: 1em;
+    color: gray;
+}

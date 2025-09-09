@@ -1,0 +1,15 @@
+
+.fixedTopbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.page {
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
