@@ -8,7 +8,8 @@ interface WorkCardProps{
 const WorkCard = ({workData}: WorkCardProps) => {
     return(
         <div>
-            {workData.companyName}
+            <h2>{workData.companyName}</h2>
+            {workData.experience}
         </div>
     )
 };

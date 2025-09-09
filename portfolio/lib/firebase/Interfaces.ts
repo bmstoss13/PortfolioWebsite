@@ -2,9 +2,16 @@ export interface WorkData {
     id: string;
     companyName: string;
     startDate: Date;
-    endDate: Date | string;
+    endDate?: Date | string;
     location: string;
-    experience: string[] | null;
+    experience: string | null;
+    skills: {
+        languages?: string[];
+        frameworks?: string[];
+        databases?: string[];
+        tools?: string[];
+    };
+    role: string;
 }
 
 export interface ProjectData {
