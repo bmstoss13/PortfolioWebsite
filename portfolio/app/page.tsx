@@ -5,6 +5,7 @@ import Topbar from "@/components/Topbar/Topbar";
 import Landing from "./pages/home/Home";
 import AboutMe from "./pages/about-me/AboutMe";
 import WorkPage from "./pages/work-experience/WorkPage";
+import ProjectsPage from "./pages/projects/ProjectsPage";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				<Landing/>
 				<AboutMe/>
 				<WorkPage/>
+				<ProjectsPage/>
 			</div>
 		</>
 	);

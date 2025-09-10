@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-bottom: 20px;
 }
 
@@ -19,7 +19,7 @@
     cursor:grab;
     transform: rotate(30deg);
     transition: all 0.2s ease;
-    color: rgb(255, 170, 0);
+    color: var(--highlight);
 }
 
 .aboutMeWaving:hover{
@@ -36,7 +36,7 @@
 
 .highFiving{
     cursor: grab;
-    color: rgb(255, 170, 0);
+    color: var(--highlight);
     animation: high-five 0.2s 
 }
 
@@ -48,12 +48,37 @@
 
 .aboutMeBody{
     display: flex;
+    flex-direction: column;
     gap: 10px;
     max-width: 1000px;
 }
+
+.aboutMeRowFirst{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.aboutMeRowFirst:hover{
+    border: 2px solid var(--highlight);
+    box-shadow: 0 0 10px var(--highlightGlow);
+}
+
 .aboutMeImage{
     height: 240px;
+    width: auto;
     border-radius: 10px;
+}
+
+.aboutMeTextSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 @media(max-width: 800px){

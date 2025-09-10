@@ -11,6 +11,19 @@
 
 }
 
+.workCardContainer.selectedCard{
+    cursor: default;
+    border: 2px solid var(--highlight);
+    box-shadow: 0 0 10px var(--highlightGlow);
+
+}
+
+.workCardContainer.selectedCard:hover{
+    box-shadow: 0 0 10px var(--highlightGlow);;
+    transform: none;
+
+}
+
 .workCardContainer:hover{
     transform: translateY(-2px);
     box-shadow: 0 2 4 rgb(97, 97, 97);

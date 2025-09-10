@@ -20,6 +20,7 @@
 }
 
 .experienceHeader p{
+    color: var(--highlight);
     font-size: 1.4em;
     font-style: italic;
 }

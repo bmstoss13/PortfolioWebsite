@@ -1,12 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --highlight: rgb(255, 170, 0);
+  --highlightGlow: rgba(255, 170, 0, 0.5);
+  --hoverShadow: 0 2 4 rgb(97, 97, 97);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --highlight: rgb(255, 170, 0);
+    --highlightGlow: rgba(255, 170, 0, 0.5);
+    --hoverShadow: 0 2 4 rgb(97, 97, 97);
   }
 }
 

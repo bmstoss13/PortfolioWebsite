@@ -2,14 +2,14 @@ import { WorkData } from '@/lib/firebase/Interfaces';
 import styles from './WorkPage.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import WorkCard from '@/components/WorkCard/WorkCard';
-import WorkExperience from '@/components/WorkCard/WorkExperience';
+import WorkCard from '@/components/Work/WorkCard';
+import WorkExperience from '@/components/Work/WorkExperience';
 import { BriefcaseBusinessIcon } from "lucide-react"
 
 export default function WorkPage(){
     const [workData, setWorkData] = useState<WorkData[] | null>(null);
     const [workExperience, setWorkExperience] = useState<WorkData | null>(null);
-    const [isSelected, setIsSelected] = useState(false);
+    const [selectedWorkId, setSelectedWorkId] = useState<string | null>(null);
 
     const fetchWorkData = async() => {
         try{
@@ -19,6 +19,7 @@ export default function WorkPage(){
 
             if (data.data.length > 0) {
                 setWorkExperience(data.data[0])
+                setSelectedWorkId(data.data[0].id)
             }
 
         } catch (err: any) {
@@ -28,18 +29,15 @@ export default function WorkPage(){
 
     const handleWorkCardClick = (work: WorkData) => {
         setWorkExperience(work);
+        setSelectedWorkId(work.id)
     }
-
-    const handleIsSelected = () => {
-        setIsSelected(true);
-    };
 
     useEffect(() => {
         fetchWorkData();
     }, []);
 
     return(
-        <div  id="work-experience" className={styles.workExperienceWrapper}>
+        <section id="work-experience" className={styles.workExperienceWrapper}>
             <div className={styles.workExperienceContainer}>
                 <div className={styles.workExperienceHeader}>
                     <h1>Work Experience</h1>
@@ -55,7 +53,7 @@ export default function WorkPage(){
                                         key={work.id} 
                                         workData={work} 
                                         onCardClick={handleWorkCardClick}
-                                        onIsSelected={handleIsSelected}
+                                        isSelected={work.id === selectedWorkId}
                                     />
                                 )
                             })
@@ -75,7 +73,7 @@ export default function WorkPage(){
 
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 };

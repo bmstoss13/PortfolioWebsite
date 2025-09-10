@@ -17,7 +17,16 @@ export interface WorkData {
 export interface ProjectData {
     id: string;
     name: string;
-    tools: string;
-    date: string;
-    experience: string[] | null;
+    skills: {
+        languages?: string[];
+        frameworks?: string[];
+        databases?: string[];
+        tools?: string[];
+    };
+    date?: string;
+    description: string | null;
+    type: string;
+    repository?: string;
+    role?: string;
+    photoURL?: string;
 }

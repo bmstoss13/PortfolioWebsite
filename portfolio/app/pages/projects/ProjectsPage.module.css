@@ -1,0 +1,33 @@
+.projectPageContainer{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectsWrapper{
+    width: 100%;
+    height:  100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectsHeader{
+    display: flex;
+    font-size: 1.4em;
+    gap: 6px;
+}
+
+.projectsHeaderIcon{
+    color: var(--highlight);
+}
+
+.feedWrapper{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 100%;
+}

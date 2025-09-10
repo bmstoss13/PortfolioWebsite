@@ -21,14 +21,14 @@
 
 .workExperienceHeader{
     margin-bottom: 10px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
 .workExperienceIcon{
-    color: brown;
+    color: rgb(255, 170, 0);
 }
 
 .workContainer{
@@ -46,7 +46,7 @@
 }
 
 .experienceContainer{
-    border: 2px solid gray;
+    border: 2px solid rgb(255, 170, 0);
     max-width: 65%;
     height: 630px;
     border-radius: 8px;
