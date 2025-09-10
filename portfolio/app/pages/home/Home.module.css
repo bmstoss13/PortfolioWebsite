@@ -1,7 +1,10 @@
 .landingContainer {
+    background-image: url("@/public/background1.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
     margin-top: 30px;
-    height: 150vh;
-    background-color: aliceblue;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,11 +12,14 @@
 
 .pageHeader {
 
-    margin-top: 200px;
+
     font-size: 1.3em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .pageHeader p{

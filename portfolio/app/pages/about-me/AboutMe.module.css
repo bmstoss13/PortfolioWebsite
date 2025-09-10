@@ -16,8 +16,34 @@
 }
 
 .aboutMeWaving{
+    cursor:grab;
     transform: rotate(30deg);
+    transition: all 0.2s ease;
     color: rgb(255, 170, 0);
+}
+
+.aboutMeWaving:hover{
+    animation: wave-animation 1s infinite;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(30deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(30deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.highFiving{
+    cursor: grab;
+    color: rgb(255, 170, 0);
+    animation: high-five 0.2s 
+}
+
+@keyframes high-five {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
 }
 
 .aboutMeBody{
@@ -26,7 +52,7 @@
     max-width: 1000px;
 }
 .aboutMeImage{
-    height: 200px;
+    height: 240px;
     border-radius: 10px;
 }
 

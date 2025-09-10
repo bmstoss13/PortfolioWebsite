@@ -7,7 +7,10 @@ export async function getAllProjectsFromDB():Promise<ProjectData[] | null> {
     try{
         const projectsDoc = collection(db, projects);
         const projectsSnapshot = await getDocs(projectsDoc);
-        const projectsList: ProjectData[] = projectsSnapshot.docs.map(doc => doc.data() as ProjectData);
+        const projectsList: ProjectData[] = projectsSnapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+        } as ProjectData));
         return projectsList;
     } catch (err: any){
         console.error("an error occurred while fetching project data from firestore: ", err);

@@ -1,0 +1,32 @@
+.workCardContainer{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.1s ease;
+    height: 150px;
+
+}
+
+.workCardContainer:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2 4 rgb(97, 97, 97);
+}
+
+.workCardList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: auto;
+    gap: 4px;
+}
+
+.workCardPosition{
+    font-style: italic;
+}

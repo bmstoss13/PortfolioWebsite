@@ -7,7 +7,10 @@ export async function getWorkExperienceFromDB(): Promise<WorkData[] | null>{
     try{
         const workDataCollection = collection(db, workExperience)
         const workSnapshot = await getDocs(workDataCollection)
-        const workList: WorkData[] = workSnapshot.docs.map(doc => doc.data() as WorkData);
+        const workList: WorkData[] = workSnapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id,
+        } as WorkData));
         return workList;
     } catch (err: any) {
         console.error("an error occurred while retrieving work experience from firestore: ", err);

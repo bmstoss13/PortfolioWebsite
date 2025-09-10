@@ -1,0 +1,54 @@
+.experienceContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.skillsSection{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid black;
+}
+
+.experienceHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+
+.experienceHeader p{
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+.toolsList{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolsList h4{
+    justify-self: center;
+
+}
+
+.skillsList{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skillItem {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+}

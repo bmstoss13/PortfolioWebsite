@@ -4,5 +4,6 @@
     background-color: black;
     justify-content: space-evenly;
     position: sticky;
+    border-bottom: 1px solid gray;
 }
 

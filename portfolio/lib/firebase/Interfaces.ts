@@ -1,8 +1,8 @@
 export interface WorkData {
     id: string;
     companyName: string;
-    startDate: Date;
-    endDate?: Date | string;
+    startDate: string;
+    endDate?: string;
     location: string;
     experience: string | null;
     skills: {
@@ -18,6 +18,6 @@ export interface ProjectData {
     id: string;
     name: string;
     tools: string;
-    date: Date;
+    date: string;
     experience: string[] | null;
 }
