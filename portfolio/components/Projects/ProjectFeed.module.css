@@ -10,4 +10,6 @@
     border-radius: 10px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    gap: 10px;
 }

@@ -2,7 +2,7 @@ export interface WorkData {
     id: string;
     companyName: string;
     startDate: string;
-    endDate?: string;
+    endDate?: string | null;
     location: string;
     experience: string | null;
     skills: {
@@ -10,7 +10,7 @@ export interface WorkData {
         frameworks?: string[];
         databases?: string[];
         tools?: string[];
-    };
+    } | null;
     role: string;
 }
 
@@ -29,4 +29,5 @@ export interface ProjectData {
     repository?: string;
     role?: string;
     photoURL?: string;
+    link?: string;
 }

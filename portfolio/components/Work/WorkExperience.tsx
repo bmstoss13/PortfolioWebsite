@@ -16,29 +16,32 @@ const WorkExperience = ({workData}: WorkExperienceProps) => {
                 <p>@{workData.companyName}</p>
             </div>
             <p>{workData.experience}</p>
-            <h2 className={styles.skillsSection}>Skills Developed</h2>
-            <div className={styles.toolsList}>
-
-                {workData.skills ? (
-                    skillOrder.map((category) => {
-                        const skillsArray = workData.skills[category as keyof typeof workData.skills] || []
-                        return skillsArray?.length > 0 && (
-                            <div key={category}>
-                                <h4>{category.charAt(0).toUpperCase() + category.slice(1)}:</h4>
-                                    <ul className={styles.skillsList}>
-                                    {skillsArray.map((skill, index) => (
-                                        <p key={index} className={styles.skillItem}>
-                                            {skill}
-                                        </p>
-                                    ))}
-                                    </ul>
-                            </div>
-                        )
-                    })
-                ) : (
-                    <p>loading experience for this role...</p>
-                )}
-            </div>
+            
+            {workData.skills ? (
+                <> {/* Use a Fragment to group the heading and skills section */}
+                    <h2 className={styles.skillsSection}>Skills Developed</h2>
+                    <div className={styles.toolsList}>
+                        {/* ... map through skills here */}
+                        {skillOrder.map((category) => {
+                            const skillsArray = workData.skills![category as keyof typeof workData.skills] || []
+                            return skillsArray?.length > 0 && (
+                                <div key={category}>
+                                    <h4>{category.charAt(0).toUpperCase() + category.slice(1)}:</h4>
+                                        <ul className={styles.skillsList}>
+                                        {skillsArray.map((skill, index) => (
+                                            <p key={index} className={styles.skillItem}>
+                                                {skill}
+                                            </p>
+                                        ))}
+                                        </ul>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </>
+            ) : (
+                <p>loading experience for this role...</p>
+            )}
         </div>
     )
 }

@@ -17,6 +17,7 @@
 
 .projectsHeader{
     display: flex;
+    align-items: center;
     font-size: 1.4em;
     gap: 6px;
 }
@@ -26,8 +27,7 @@
 }
 
 .feedWrapper{
-    margin-right: auto;
-    margin-left: auto;
+
     margin-top: 10px;
     width: 100%;
 }
