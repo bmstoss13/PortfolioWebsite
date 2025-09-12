@@ -1,11 +1,11 @@
 import { projects } from "../firebase/collections";
 import { ProjectData } from "../firebase/Interfaces";
 import { db } from "../firebase/firebaseUtils";
-import { doc, getDocs, collection } from "firebase/firestore";
+import { doc, getDocs, collection, query, orderBy } from "firebase/firestore";
 
 export async function getAllProjectsFromDB():Promise<ProjectData[] | null> {
     try{
-        const projectsDoc = collection(db, projects);
+        const projectsDoc = query(collection(db, projects), orderBy("orderNumber"));
         const projectsSnapshot = await getDocs(projectsDoc);
         const projectsList: ProjectData[] = projectsSnapshot.docs.map(doc => ({
             ...doc.data(),

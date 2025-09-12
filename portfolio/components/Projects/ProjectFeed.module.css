@@ -1,15 +1,54 @@
 .projectFeedContainer{
     display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 .feedBody{
     padding: 10px;
     width: 100%;
     max-width: 1200px;
+    height: 100%;
+    overflow-y: auto;
     border: 2px solid gray;
     border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+@media (min-width: 0px) {
+  .feedBody {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 640px) {
+  .feedBody {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 900px) {
+  .feedBody {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feedBody {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 97vw;
+  }
+}
+

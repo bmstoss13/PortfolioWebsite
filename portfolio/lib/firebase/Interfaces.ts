@@ -30,4 +30,5 @@ export interface ProjectData {
     role?: string;
     photoURL?: string;
     link?: string;
+    orderNumber: number;
 }

@@ -12,7 +12,8 @@
 
 .pageHeader {
 
-
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
     font-size: 1.3em;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,25 @@
     margin-bottom: auto;
 }
 
-.pageHeader p{
-    font-size: 1em;
-    color: gray;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+.pageHeader p{
+    margin-top: 10px;
+    font-size: 1em;
+    color: gray !important;
+    text-align: center;
+}
+
+.nameHighlight {
+    cursor: pointer;
+    color: var(--highlight);
+    transition: all 0.2s ease;
+}
+
+.nameHighlight:hover{
+    text-shadow: 0 0 10px var(--highlightGlow);
+}
+

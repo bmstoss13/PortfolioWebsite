@@ -7,8 +7,8 @@ export default function Landing() {
     return(
         <div className={styles.landingContainer}>
             <div className={styles.pageHeader}>
-                <h1>Brian Stoss's Portfolio</h1>
-                <p>My coding journey so far</p>
+                <h1><span className={styles.nameHighlight}>Brian Stoss's</span> Portfolio</h1>
+                <p>Full Stack Developer and Creator - passionate about building clean, scalable, and user-focused applications.</p>
             </div>
         </div>
 
