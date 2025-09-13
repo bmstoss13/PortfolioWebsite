@@ -25,7 +25,7 @@ export default function AboutMe(){
                 <Hand 
                     className={isHighFiving ? styles.highFiving : styles.aboutMeWaving } 
                     onClick={handleHighFiving}
-                    size={35}
+                    size={40}
                 />
             </header>
             <div className={styles.aboutMeBody}>

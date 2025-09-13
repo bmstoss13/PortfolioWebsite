@@ -6,18 +6,26 @@
     cursor: pointer;
     width: 100%;
     min-width: 280px;
-    max-width: 290px;
-    min-height: 380px;
+    max-width: 280px;
+    min-height: 400px;
     padding: 10px;
     border: 2px solid gray;
     border-radius: 10px;
     transition: all 0.1s ease;
+    overflow: hidden;
 }
 
 .projectCardContainer h2{
+    margin-top: 6px;
     display: flex;
     justify-content: center;
     transition: all 0.2s ease;
+}
+
+.projectCardContainer p{
+    display: flex;
+    text-align: center;
+    width: 90%;
 }
 
 .projectCardContainer:hover{
@@ -58,7 +66,7 @@
     color: rgba(0, 0, 0, 0.2);
     background: rgba(207, 207, 207, 0.4);
     font-weight: 500;
-    z-index: 1000;
+    /* z-index: 1000; */
     position: absolute;
     top: 8px;
     left: 8px;
@@ -83,11 +91,43 @@
     color: var(--highlight);
 }
 
-.iconContainer{
-    position: sticky;
+.iconContainer {
     margin-top: auto;
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 40px; 
     width: 100%;
-    gap: 6px;
+    position: relative;
 }
+
+.scrollWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    position: absolute;   
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.skillRow {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-right: 6px;
+}
+
+.scrollAnimation {
+    animation: scrollIcons 15s linear infinite;
+}
+
+@keyframes scrollIcons {
+    from {
+        transform: translate(0, -50%);
+    }
+    to {
+        transform: translate(-50%, -50%); 
+    }
+}
+

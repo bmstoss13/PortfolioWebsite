@@ -1,5 +1,5 @@
 .aboutMeContainer{
-    height: 150vh;
+    min-height: 150vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -59,6 +59,7 @@
     align-items: center;
     gap: 8px;
     border: 2px solid gray;
+    box-shadow: 0 2 4 rgb(97, 97, 97);
     border-radius: 10px;
     padding: 10px;
     transition: all 0.2s ease;
@@ -84,5 +85,6 @@
 @media(max-width: 800px){
     .aboutMeBody{
         max-width: 95vw;
+        font-size: 0.9em;
     }
 }

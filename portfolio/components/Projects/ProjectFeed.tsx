@@ -5,9 +5,10 @@ import ProjectCard from './ProjectCard';
 interface ProjectFeedProps{
     onSwitchType: (type: string) => void;
     projectData: ProjectData[];
+    onOpenModal: (projectData: ProjectData) => void;
 }
 
-const ProjectFeed = ({onSwitchType, projectData}:ProjectFeedProps) => {
+const ProjectFeed = ({onOpenModal, onSwitchType, projectData}:ProjectFeedProps) => {
     return(
         <div className={styles.projectFeedContainer}>
             <div className={styles.feedBody}>
@@ -17,11 +18,12 @@ const ProjectFeed = ({onSwitchType, projectData}:ProjectFeedProps) => {
                             <ProjectCard
                                 key={project.id}
                                 projectData={project}
+                                onOpenModal={onOpenModal}
                             />
                         )
                     })
                 ) : (
-                    <div></div>
+                    null
                 )}
             </div>
 

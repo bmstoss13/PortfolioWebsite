@@ -1,0 +1,46 @@
+.educationPageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: aliceblue;
+}
+
+.educationPageHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 1.4em;
+}
+
+.gradCap{
+    cursor: pointer;
+    color: var(--highlight);
+    transition: all 0.2s ease;
+}
+
+.gradCap:hover{
+    transform: scale(1.2);
+}
+
+.animateCap{
+    animation: throwCap 2s forwards ease-in-out;
+}
+
+@keyframes throwCap {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-200px) translateX(40px) rotate(360deg);
+    }
+
+    100% {
+        transform: translateY(120vh) translateX(100px) rotate(720deg);
+    }
+
+}

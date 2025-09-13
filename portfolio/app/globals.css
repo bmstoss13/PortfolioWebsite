@@ -20,6 +20,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
+
+  margin-top: 3vh;
+  height: 94vh;
 }
 
 body {
@@ -39,6 +43,19 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  margin-top: 30px;
+}
+
+.landingPage,
+.aboutMePage,
+.workPage,
+.projectsPage,
+.educationPage {
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {

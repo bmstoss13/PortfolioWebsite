@@ -1,15 +1,20 @@
 import { WorkData } from '@/lib/firebase/Interfaces';
 import styles from './WorkPage.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import WorkCard from '@/components/Work/WorkCard';
 import WorkExperience from '@/components/Work/WorkExperience';
-import { BriefcaseBusinessIcon } from "lucide-react"
+import { BriefcaseBusinessIcon } from "lucide-react";
+import Draggable from 'react-draggable';
+import ReactDOM from 'react-dom';
 
 export default function WorkPage(){
     const [workData, setWorkData] = useState<WorkData[] | null>(null);
     const [workExperience, setWorkExperience] = useState<WorkData | null>(null);
     const [selectedWorkId, setSelectedWorkId] = useState<string | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
+
+    const nodeRef = useRef(null);
 
     const fetchWorkData = async() => {
         try{
@@ -32,6 +37,14 @@ export default function WorkPage(){
         setSelectedWorkId(work.id)
     }
 
+    const handleStartDragging = () => {
+        setIsDragging(true);
+    }
+
+    const handleStopDragging = () => {
+        setIsDragging(false);
+    }
+
     useEffect(() => {
         fetchWorkData();
     }, []);
@@ -41,7 +54,17 @@ export default function WorkPage(){
             <div className={styles.workExperienceContainer}>
                 <div className={styles.workExperienceHeader}>
                     <h1>Work Experience</h1>
-                    <BriefcaseBusinessIcon size={35} className={styles.workExperienceIcon}/>
+                    <Draggable
+                        nodeRef={nodeRef}
+                        onStart={handleStartDragging}
+                        onStop={handleStopDragging}
+                    >
+                        <BriefcaseBusinessIcon
+                            ref={nodeRef} 
+                            size={40} 
+                            className={`${styles.workExperienceIcon} `}/>
+                    </Draggable>
+
                 </div>
 
                 <div className={styles.workContainer}>
