@@ -10,6 +10,7 @@ import EducationPage from "./pages/education/Education";
 import ProjectModal from "./pages/projects/ProjectModal";
 import { useState } from "react";
 import { ProjectData } from "@/lib/firebase/Interfaces";
+import ConnectPage from "./pages/connect/ConnectPage";
 
 export default function Home() {
 	const [isOpeningModal, setIsOpeningModal] = useState(false);
@@ -37,6 +38,7 @@ export default function Home() {
 					<WorkPage/>
 					<ProjectsPage onOpenModal={handleModalOpen}/>
 					<EducationPage/>
+					<ConnectPage/>
 				</div>
 
 

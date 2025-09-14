@@ -18,10 +18,9 @@ const WorkExperience = ({workData}: WorkExperienceProps) => {
             <p>{workData.experience}</p>
             
             {workData.skills ? (
-                <> {/* Use a Fragment to group the heading and skills section */}
+                <>
                     <h2 className={styles.skillsSection}>Skills Developed</h2>
                     <div className={styles.toolsList}>
-                        {/* ... map through skills here */}
                         {skillOrder.map((category) => {
                             const skillsArray = workData.skills![category as keyof typeof workData.skills] || []
                             return skillsArray?.length > 0 && (

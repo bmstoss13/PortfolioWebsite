@@ -1,10 +1,13 @@
 .educationPageContainer{
+    background-image: url("@/public/blue.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150vh;
-    background-color: aliceblue;
+    min-height: 150vh;
+    background-color: rgb(255, 255, 255);
 }
 
 .educationPageHeader{
@@ -16,6 +19,7 @@
 }
 
 .gradCap{
+    z-index: 10;
     cursor: pointer;
     color: var(--highlight);
     transition: all 0.2s ease;
@@ -43,4 +47,21 @@
         transform: translateY(120vh) translateX(100px) rotate(720deg);
     }
 
+}
+
+.educationBody{
+    display:flex;
+    margin-top: 10px;
+    min-height: 60%;
+    width: 1200px;
+    max-width: 97vw;
+}
+
+@media (max-width: 800px){
+    .educationPageContainer{
+        min-height: 200vh;
+    }
+    .educationBody{
+        max-width: 97vw;
+    }
 }

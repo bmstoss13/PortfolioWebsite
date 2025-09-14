@@ -21,6 +21,7 @@
     border: 2px solid var(--highlight);
     border-radius: 14px;
     position: relative;
+
 }
 
 .modalHeader{
@@ -33,6 +34,7 @@
 
 .modalHeader h1{
     justify-self: center;
+    color: var(--highlight)
 }
 
 .modalSubheader{
@@ -45,6 +47,16 @@
     right: 6px;
 }
 
+.projectModalBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .projectModalFirstRow{
     display: flex;
     width: 97%;
@@ -55,13 +67,18 @@
     position: relative;
     border: 2px solid gray;
     border-radius: 14px;
+    transition: all 0.2s ease;
+}
 
+.projectModalFirstRow:hover{
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px var(--highlightGlow);
 }
 
 .modalImageWrapper{
     position: relative;
-    width: 80%;
-    height: 220px;
+    width: 85%;
+    height: 240px;
     border: 1px solid gray;
     border-radius: 14px;
     overflow: hidden; 
@@ -75,7 +92,7 @@
 
 .modalLinkContainer{
     position: absolute;
-    bottom: 0px;
+    bottom: 2px;
     display: flex;
     width: 80%;
 }
@@ -92,5 +109,174 @@
     gap: 40px;
     font-size: large;
     align-self: center;
+
 }
 
+.modalLinkItemContainer{
+    width: 30px;
+    height: 30px;
+    background-image: url('/github-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.modalLinkItemContainer:hover {
+    width: 30px;
+    height: 30px;
+    transform: translateY(-2px);
+    background-image: url('/github-svgrepo-hover.svg');
+    border-radius: 100%;
+}
+.modalLinkItemContainer:hover .modalLinkItem {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.modalLinkItem{    
+    transition: all 0.2s ease-in-out;
+}
+
+.modalLinkItemLink{    
+    transition: all 0.2s ease-in-out;
+}
+
+.modalLinkItemLink:hover{ 
+    color: var(--highlight);   
+    transform: translateY(-2px);
+}
+
+.projectSkillsContainer{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 14px;
+    flex-direction: column;
+    width: 97%;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.projectSkillsContainer:hover{
+    border-color: var(--highlight);
+    box-shadow: var(--highlightGlow);
+}
+
+.projectSkillsContainer h2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6px;
+}
+
+.projectSkillsCategory{
+    display: flex;
+    align-items: center;
+}
+
+.projectSkillsCategory h4{
+    margin-right: 10px;
+}
+
+.projectSkillsList{
+    display: flex;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    gap: 6px;
+}
+
+.projectSkillItem{
+    cursor: default;
+    display: flex;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.languages {
+    background-color: #f0f8ff; 
+    border: 1px solid #c0d9e8;
+}
+
+.frameworks {
+    background-color: #f5fffa;
+    border: 1px solid #c8e8d0;
+}
+
+.databases {
+    background-color: #fffaf0; 
+    border: 1px solid #e8d7c1;
+}
+
+.tools {
+    background-color: #faf0ff; 
+    border: 1px solid #d7c1e8;
+}
+
+@media (max-width: 800px){
+    .modalContainer{
+        max-width: 97vw;
+    }
+    .projectModalFirstRow{
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 600px){
+    .modalContainer{
+        max-width: 97vw;
+    }
+    .projectModalFirstRow{
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 520px){
+    .projectModalFirstRow{
+        font-size: 0.85em;
+        flex-direction: column;
+        align-items: center;
+        min-height: fit-content;
+        padding-bottom: 50px;
+    }
+    .modalImageWrapper{
+        height: 160px;
+    }
+    .modalLinkContainer h3{
+        align-self: center;
+        margin-right: 10px;
+        width: 60%;
+    }
+    .projectSkillsContainer{    
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 310px){
+    .projectModalFirstRow{
+        font-size: 0.75em;
+        flex-direction: column;
+        align-items: center;
+        min-height: 500px;
+    }
+    .modalImageWrapper{
+        height: 100px;
+    }
+}
+
+@media (max-width: 200px){
+    .projectModalFirstRow{
+        font-size: 0.7em;
+        flex-direction: column;
+        align-items: center;
+        min-height: 700px;
+        padding: 4px;
+    }
+    .modalImageWrapper{
+        height: 0px;
+        border: none;
+    }
+}

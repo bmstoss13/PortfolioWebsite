@@ -6,7 +6,6 @@ import WorkCard from '@/components/Work/WorkCard';
 import WorkExperience from '@/components/Work/WorkExperience';
 import { BriefcaseBusinessIcon } from "lucide-react";
 import Draggable from 'react-draggable';
-import ReactDOM from 'react-dom';
 
 export default function WorkPage(){
     const [workData, setWorkData] = useState<WorkData[] | null>(null);

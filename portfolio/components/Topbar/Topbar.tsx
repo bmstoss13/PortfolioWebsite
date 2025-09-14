@@ -4,8 +4,8 @@ import TopbarItem from './TopbarItem';
 
 const Topbar = () => {
     const topbarItems = { 
-        "about-me": "About Me",
-        "work-experience": "Work Experience", 
+        "about-me": "About",
+        "work-experience": "Work", 
         "projects": "Projects", 
         "education": "Education", 
         "connect": "Connect"

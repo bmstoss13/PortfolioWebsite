@@ -1,4 +1,5 @@
 .projectCardContainer{
+    background-color: white !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,13 +7,15 @@
     cursor: pointer;
     width: 100%;
     min-width: 280px;
-    max-width: 280px;
+    /* max-width: 300px; */
     min-height: 400px;
     padding: 10px;
     border: 2px solid gray;
-    border-radius: 10px;
+    border-radius: 14px;
     transition: all 0.1s ease;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .projectCardContainer h2{
@@ -46,6 +49,7 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
+    width: 100%;
 }
 
 .projectImageWrapper {

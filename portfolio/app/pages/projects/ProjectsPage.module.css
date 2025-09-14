@@ -1,7 +1,10 @@
 .projectPageContainer{
+    background-image: url("@/public/white.jpg");
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 180vh;
-    max-height: 300vh;
+    min-height: 180vh;
+    max-height: 400vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +50,13 @@
     font-family: 'Courier New', Courier, monospace;
     right: 12px;
     top: 16px;
+}
+
+@media(max-width: 1200px){
+    .projectPageContainer{
+        min-height: 250vh;
+        align-items: center;
+    }
 }
 
 

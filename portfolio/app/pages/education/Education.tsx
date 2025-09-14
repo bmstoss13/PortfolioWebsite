@@ -1,3 +1,4 @@
+import EducationContainer from '@/components/Education/EducationContainer';
 import styles from './Education.module.css';
 import { GraduationCap } from 'lucide-react';
 import { useState } from 'react';
@@ -27,6 +28,9 @@ export default function EducationPage(){
                     onAnimationEnd={handleAnimationDone}
                 />
             </div>
+            <main className={styles.educationBody}>
+                <EducationContainer/>
+            </main>
         </section>
     )
 }

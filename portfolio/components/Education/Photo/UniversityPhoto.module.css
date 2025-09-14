@@ -1,0 +1,19 @@
+.universityPhotoContainer{
+    position: relative;
+    width: 271px;
+    height: 300px;
+    overflow: hidden; 
+}
+
+.universityPhoto{
+    border: 2px solid gray;
+    border-radius: 14px;
+    object-fit: contain;
+}
+
+@media (max-width: 800px){
+    .universityPhotoContainer{
+        height: 239px;
+        width: 215px;
+    }
+}

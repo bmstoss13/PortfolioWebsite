@@ -1,0 +1,9 @@
+.connectPageContainer{
+        background-image: url("@/public/white.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 150vh;
+    align-items: center;
+    justify-content: center;
+}

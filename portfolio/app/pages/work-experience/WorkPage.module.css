@@ -1,5 +1,8 @@
 .workExperienceWrapper{
-    height: 150vh;
+    background-image: url("@/public/blue.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +59,12 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    border: 2px solid gray;
+    border-radius: 14px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 4px rgb(97, 97, 97);
+    backdrop-filter: blur(30px);
 }
 
 .cardContainer{
@@ -65,8 +74,8 @@
 }
 
 .experienceContainer{
-    border: 2px solid rgb(255, 170, 0);
-    max-width: 65%;
+    /* border: 2px solid rgb(255, 170, 0);
+    max-width: 65%; */
     height: 630px;
     border-radius: 8px;
 }

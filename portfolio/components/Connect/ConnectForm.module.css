@@ -1,0 +1,61 @@
+.connectFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.connectFormContainer h1{
+    margin-bottom: 4px;
+}
+
+.connectFormContainer h3{
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: var(--highlight);
+}
+
+.connectHeader{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+}
+
+.sendIcon{
+    cursor: pointer;
+    color: var(--highlight);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sendIcon:hover {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.sendIcon.isAnimating {
+    animation: flyAway 2.5s linear forwards;
+    offset-path: path("M0,0 C150,-120 150,-240 0,-240 C-150,-240 -150,-120 150,0 L800,200" 
+    );
+    offset-rotate: auto 20deg; 
+}
+
+@keyframes flyAway {
+    0% {
+        offset-distance: 0%;
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* 80% {
+        offset-distance: 80%;
+        opacity: 1;
+        transform: scale(1);
+    } */
+    100% {
+        offset-distance: 100%;
+        opacity: 1;
+        transform: scale(0.7);
+    }
+}
+
+
+
