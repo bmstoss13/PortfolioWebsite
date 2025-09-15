@@ -5,7 +5,7 @@ const UniversityPhoto = () => {
     return(
         <div className={styles.universityPhotoContainer}>
             <Image 
-                src={'/university-photo-zoomed.png'}
+                src={'/university-photo-zoomed.PNG'}
                 alt={'university photo'}
                 fill
                 className={styles.universityPhoto}
