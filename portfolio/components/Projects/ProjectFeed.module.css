@@ -29,25 +29,7 @@
     backdrop-filter: blur(20px);
 }
 
-.languages {
-    background-color: #f0f8ff; 
-    border: 1px solid #c0d9e8;
-}
 
-.frameworks {
-    background-color: #f5fffa;
-    border: 1px solid #c8e8d0;
-}
-
-.databases {
-    background-color: #fffaf0; 
-    border: 1px solid #e8d7c1;
-}
-
-.tools {
-    background-color: #faf0ff; 
-    border: 1px solid #d7c1e8;
-}
 
 @media (min-width: 0px) {
   .feedBody {
@@ -76,4 +58,6 @@
     max-width: 97vw;
   }
 }
+
+
 

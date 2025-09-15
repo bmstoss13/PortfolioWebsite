@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
 .pageHeader {
@@ -20,6 +21,9 @@
     justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -42,5 +46,14 @@
 
 .nameHighlight:hover{
     text-shadow: 0 0 10px var(--highlightGlow);
+}
+
+@media (max-width: 600px){
+    .pageHeader{
+        font-size: 1.2em;
+    }
+    .pageHeader p{
+        max-width: 95vw;
+    }
 }
 

@@ -115,10 +115,13 @@
     .aboutMeBody{
         font-size: 0.9em;
     }
+    .aboutMeRowFirst{
+        flex-direction: column;
+    }
 }
 
 @media(max-height: 600px){
     .aboutMeContainer{
-        min-height: 200vh;
+        min-height: 220vh;
     }
 }
