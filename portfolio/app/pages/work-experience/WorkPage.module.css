@@ -95,4 +95,13 @@
         max-width: 97vw;
         font-size: 0.8em;
     }
+
+}
+
+@media (max-height: 600px) {
+    .workExperienceWrapper{
+        min-height: 260vh;
+    }
+
+
 }

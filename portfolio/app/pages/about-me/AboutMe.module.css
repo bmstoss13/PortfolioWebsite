@@ -17,6 +17,7 @@
     gap: 6px;
     font-size: 1.4em;
     margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 .aboutMeWaving{
@@ -113,5 +114,11 @@
 @media(max-width: 600px){
     .aboutMeBody{
         font-size: 0.9em;
+    }
+}
+
+@media(max-height: 600px){
+    .aboutMeContainer{
+        min-height: 200vh;
     }
 }

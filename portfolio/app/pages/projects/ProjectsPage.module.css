@@ -3,8 +3,8 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 200vh;
-    max-height: 400vh;
+    min-height: 180vh;
+    /* max-height: 400vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .projectsWrapper{
     width: 100%;
-    height:  100vh;
+    min-height:  100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +90,7 @@
 
 @media(max-width: 1200px){
     .projectPageContainer{
-        min-height: 250vh;
+        min-height: auto;
         align-items: center;
     }
 }
@@ -98,7 +98,7 @@
 
 @media(max-width: 900px){
     .projectPageContainer{
-        min-height: 300vh;
+        min-height: auto;
         align-items: center;
     }
 }
@@ -108,7 +108,13 @@
         min-height: 500vh;
     }
     .projectTypeButtons{
-        gap: 2vw;
+        gap: 0.5rem;
+    }
+}
+
+@media(max-height: 600px){
+    .projectPageContainer{
+        height: auto;
     }
 }
 

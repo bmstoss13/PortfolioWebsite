@@ -56,5 +56,6 @@
 @media (max-width: 600px){
     .workCardContainer{
         min-width: 160px;
+        min-height: 171px;
     }    
 }
