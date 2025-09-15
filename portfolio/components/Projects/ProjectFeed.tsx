@@ -3,12 +3,12 @@ import styles from './ProjectFeed.module.css';
 import ProjectCard from './ProjectCard';
 
 interface ProjectFeedProps{
-    onSwitchType: (type: string) => void;
+    // onSwitchType: (type: string) => void;
     projectData: ProjectData[];
     onOpenModal: (projectData: ProjectData) => void;
 }
 
-const ProjectFeed = ({onOpenModal, onSwitchType, projectData}:ProjectFeedProps) => {
+const ProjectFeed = ({onOpenModal, projectData}:ProjectFeedProps) => {
     return(
         <div className={styles.projectFeedContainer}>
             <div className={styles.feedBody}>

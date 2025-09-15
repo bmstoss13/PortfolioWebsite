@@ -22,12 +22,12 @@
 .aboutMeWaving{
     cursor:grab;
     transform: rotate(30deg);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     color: var(--highlight);
 }
 
 .aboutMeWaving:hover{
-    animation: wave-animation 1s infinite;
+    animation: wave-animation 1s infinite ease;
 }
 
 @keyframes wave-animation {
@@ -54,7 +54,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 1000px;
+    max-width: 800px;
+    border: 2px solid gray;
+    padding: 10px;
+    box-shadow: 0 2 4 rgb(97, 97, 97);
+    border-radius: 14px;
     backdrop-filter: blur(10px);
 }
 
@@ -64,10 +68,12 @@
     align-items: center;
     gap: 8px;
     border: 2px solid gray;
-    box-shadow: 0 2 4 rgb(97, 97, 97);
-    border-radius: 10px;
+    
+    border-radius: 14px;
     padding: 10px;
     transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .aboutMeRowFirst:hover{
@@ -87,9 +93,25 @@
     gap: 10px;
 }
 
+.resumeLink{
+    color: var(--highlight);
+    border-bottom: 2px solid var(--highlight);
+    transition: all 0.2s ease;
+}
+
+.resumeLink:hover{
+    text-shadow: 0 0 10px var(--highlightGlow);
+}
+
 @media(max-width: 800px){
     .aboutMeBody{
         max-width: 95vw;
+
+    }
+}
+
+@media(max-width: 600px){
+    .aboutMeBody{
         font-size: 0.9em;
     }
 }

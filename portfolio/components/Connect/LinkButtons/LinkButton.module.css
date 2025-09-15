@@ -1,0 +1,21 @@
+.linkButtonContainer{
+    padding: 8px;
+    display: flex;    
+    border: 2px solid gray;
+    border-radius: 14px;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+}
+
+.linkButtonContainer:hover{
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px var(--highlightGlow);
+    transform: translateY(-2px);
+}
+
+.buttonContent{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

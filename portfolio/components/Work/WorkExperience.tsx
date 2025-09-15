@@ -28,7 +28,7 @@ const WorkExperience = ({workData}: WorkExperienceProps) => {
                                     <h4>{category.charAt(0).toUpperCase() + category.slice(1)}:</h4>
                                         <ul className={styles.skillsList}>
                                         {skillsArray.map((skill, index) => (
-                                            <p key={index} className={styles.skillItem}>
+                                            <p key={index} className={`${styles.skillItem} ${styles[category]}`}>
                                                 {skill}
                                             </p>
                                         ))}

@@ -34,6 +34,7 @@
     cursor: grab;
     color: var(--highlight);
     transform-style: preserve-3d;
+    z-index: 20;
 }
 
 .workExperienceIcon:active{
@@ -76,9 +77,11 @@
 .experienceContainer{
     /* border: 2px solid rgb(255, 170, 0);
     max-width: 65%; */
-    height: 630px;
+    min-height: 630px;
     border-radius: 8px;
 }
+
+
 
 @media (max-width: 900px) {
     .workExperienceContainer{

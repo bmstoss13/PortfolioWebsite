@@ -41,8 +41,8 @@ export default function AboutMe(){
                         </Image>
                     )}
                     <div className={styles.aboutMeTextSection}>
-                        <p>Hi, I’m Brian - a 2025 B.A. Computer Science and Data Science minor graduate from the University of Virginia. I enjoy building systems that make life simpler, whether that’s fine-tuning AI models for accuracy, creating scalable full-stack apps, or rethinking how users interact with software. My recent work has ranged from applying OCR and AI at Kinetech Cloud to developing my own projects, like <strong>Sunshine</strong>, a social media platform I'm building from the ground up with a Go backend and Next.js frontend.</p>
-                        <p>I’m especially drawn to projects where I can take an idea from scratch to a working product - cleaning messy data, designing a user interface, and seeing everything come together in a tool people actually enjoy using. </p>
+                        <p>I'm a recent University of Virginia graduate with a B.A. in Computer Science and a minor in Data Science, and I'm passionate about building software that solves real-world problems. My experience ranges from creating scalable full-stack applications to applying machine learning models for data analysis and optimization. I love the entire process of bringing an idea to life, from the initial design to the final, polished product.</p>
+                        
                     </div>
                 </div>
 
@@ -50,8 +50,17 @@ export default function AboutMe(){
                 <div className={styles.aboutMeRowFirst}>
 
                     <div className={styles.aboutMeTextSection}>
-                        <p>I’ve also explored ML with projects like <strong>Detecting Fish Features Using YOLOv8-based CNN</strong>, where my team trained a YOLO-v8-based CNN model with 2000+ JPEGs from longline tuna vessel footage in the Pacific to monitor and prevent overfishing of fish species.</p>
-                        <p>Outside of coding, I stay creative by making music, which uses a lot of the same iterative process as programming. You’ll also find me at the gym or on long walks with friends, which keep me balanced and ready for the next challenge.</p>
+                        <p>Outside of coding, I enjoy making music - especially synthwave. This is a hobby that mirrors the creative and iterative process of programming as it involves picking the right tool {'(and even building it from scratch)'} and finetuning it to perfection. I believe in staying balanced, so you'll often find me at the gym or on a long walk with friends, recharging and prepping for my next challenge.</p>
+                            <p>Feel free to check out my resume{' '} 
+                                <a
+                                    href='/resume.pdf'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                    className={styles.resumeLink}
+                                >
+                                    <strong>here.</strong>
+                                </a>
+                            </p>
                     </div>                    
                         
                             <Image
