@@ -2,7 +2,7 @@ import { ProjectData } from '@/lib/firebase/Interfaces';
 import styles from './ProjectCard.module.css';
 import Image from 'next/image';
 import { skillIcons } from '@/lib/skillIcons';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 interface ProjectCardProps {
     projectData: ProjectData;

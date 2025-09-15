@@ -41,7 +41,7 @@ export default function AboutMe(){
                         </Image>
                     )}
                     <div className={styles.aboutMeTextSection}>
-                        <p>I'm a recent University of Virginia graduate with a B.A. in Computer Science and a minor in Data Science, and I'm passionate about building software that solves real-world problems. My experience ranges from creating scalable full-stack applications to applying machine learning models for data analysis and optimization. I love the entire process of bringing an idea to life, from the initial design to the final, polished product.</p>
+                        <p>I&apos;m a recent University of Virginia graduate with a B.A. in Computer Science and a minor in Data Science, and I&apos;m passionate about building software that solves real-world problems. My experience ranges from creating scalable full-stack applications to applying machine learning models for data analysis and optimization. I love the entire process of bringing an idea to life, from the initial design to the final, polished product.</p>
                         
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function AboutMe(){
                 <div className={styles.aboutMeRowFirst}>
 
                     <div className={styles.aboutMeTextSection}>
-                        <p>Outside of coding, I enjoy making music - especially synthwave. This is a hobby that mirrors the creative and iterative process of programming as it involves picking the right tool {'(and even building it from scratch)'} and finetuning it to perfection. I believe in staying balanced, so you'll often find me at the gym or on a long walk with friends, recharging and prepping for my next challenge.</p>
+                        <p>Outside of coding, I enjoy making music - especially synthwave. This is a hobby that mirrors the creative and iterative process of programming as it involves picking the right tool {'(and even building it from scratch)'} and finetuning it to perfection. I believe in staying balanced, so you&apos;ll often find me at the gym or on a long walk with friends, recharging and prepping for my next challenge.</p>
                             <p>Feel free to check out my resume{' '} 
                                 <a
                                     href='/resume.pdf'

@@ -26,7 +26,7 @@ export default function WorkPage(){
                 setSelectedWorkId(data.data[0].id)
             }
 
-        } catch (err: any) {
+        } catch (err) {
             console.log("an error occurred while fetching work data from db: ", err);
         }
     }
@@ -42,6 +42,7 @@ export default function WorkPage(){
 
     const handleStopDragging = () => {
         setIsDragging(false);
+        console.log(isDragging);
     }
 
     useEffect(() => {

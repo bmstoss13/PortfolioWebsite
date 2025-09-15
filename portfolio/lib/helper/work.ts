@@ -1,5 +1,5 @@
 import { db } from "../firebase/firebaseUtils";
-import { getDocs, getDoc, collection, doc } from "firebase/firestore";
+import { getDocs, collection, } from "firebase/firestore";
 import { WorkData } from "../firebase/Interfaces";
 import { workExperience } from "../firebase/collections";
 
@@ -12,8 +12,8 @@ export async function getWorkExperienceFromDB(): Promise<WorkData[] | null>{
             id: doc.id,
         } as WorkData));
         return workList;
-    } catch (err: any) {
+    } catch (err) {
         console.error("an error occurred while retrieving work experience from firestore: ", err);
-        throw new Error(err.message || "failed to retrieve work experience from firestore.");
+        throw new Error("failed to retrieve work experience from firestore.");
     }
 }

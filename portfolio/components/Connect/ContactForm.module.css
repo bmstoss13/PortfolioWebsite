@@ -71,3 +71,10 @@
   margin-top: -10px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 800px){
+    .contactForm{
+        max-width: 97vw;
+        min-width: 90vw;
+    }
+}

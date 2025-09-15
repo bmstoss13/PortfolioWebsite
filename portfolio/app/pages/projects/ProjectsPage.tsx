@@ -26,7 +26,7 @@ export default function ProjectsPage({ onOpenModal }: ProjectsPageProps) {
             setOriginalProjectData(data.data);
             setDisplayedProjects(data.data.filter((project: ProjectData) => project.type === "software"));
             setProjectType("software"); // Ensure state is correctly set
-        } catch (err: any) {
+        } catch (err) {
             console.error("An error occurred while fetching project data: ", err);
         }
     };
