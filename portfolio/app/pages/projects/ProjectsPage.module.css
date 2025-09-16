@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 180vh;
+    min-height: 150vh;
     /* max-height: 400vh; */
     display: flex;
     flex-direction: column;
@@ -12,6 +12,8 @@
 }
 
 .projectsWrapper{
+    margin-top: 100px;
+    margin-bottom: 100px;
     width: 100%;
     min-height:  100vh;
     display: flex;
@@ -106,7 +108,7 @@
 
 @media(max-width: 650px){
     .projectPageContainer{
-        min-height: 500vh;
+        min-height: 150vh;
     }
     .projectTypeButtons{
         gap: 0.5rem;
